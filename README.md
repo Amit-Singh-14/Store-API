@@ -1,6 +1,14 @@
 # Store API
 
-This is a description of your project.
+# Project Description
+
+It is a versatile API for searching and retrieving product information. Seamlessly filter products by features, company, name, and apply numeric filters. The API supports dynamic sorting, field selection, and provides endpoints for both general product queries and specific static conditions.
+
+
+## Setup
+1. npm i 
+2. Add your kown MONGO_URI to .env file.
+3. num run start
 
 ## Features
 
@@ -23,4 +31,16 @@ This is a description of your project.
 
 ```plaintext
 GET /api/products?featured=true&company=ExampleCompany&name=example&sort=price&fields=name,price
+```
+
+### 2. Get Products with Static Price Condition
+
+#### Endpoint: `/api/products/static`
+
+- **Description:** Retrieve products with prices greater than 30.
+
+#### Example Usage:
+
+```plaintext
+GET /api/products/static
 ```
